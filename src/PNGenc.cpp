@@ -78,7 +78,7 @@ int PNG::encodeBegin(int iWidth, int iHeight, uint8_t ucPixelType, uint8_t ucBpp
     _png.ucPixelType = ucPixelType;
     _png.ucBpp = ucBpp;
     if (pPalette != NULL)
-        memcpy(_png.ucPalette, pPalette, 768); // save 256 color entries
+        memcpy(_png.ucPalette, pPalette, (1 << ucBpp) * 3); // save up to 256 color entries
     _png.ucCompLevel = ucCompLevel;
     _png.y = 0;
     return PNG_SUCCESS;
