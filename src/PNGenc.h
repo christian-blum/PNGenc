@@ -52,7 +52,7 @@
 #if defined( __LINUX__ ) || defined (__MACH__)
 #define MEM_SHRINK 0
 #else
-#define MEM_SHRINK 4
+#define MEM_SHRINK 5
 #endif
 
 /* Defines and variables */
